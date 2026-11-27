@@ -118,21 +118,53 @@
       <p>Prefer email? <strong style="color:var(--gold)">support@storyforgeapp.me</strong></p>
       <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?q=80&w=1400&auto=format&fit=crop" alt="Open books on a shelf" style="border-radius:12px;border:1px solid var(--line2);margin-top:18px;height:220px;width:100%;object-fit:cover">
     </div>
-    <form class="contact" action="mailto:support@storyforgeapp.me" method="post" enctype="text/plain">
-      <div>
-        <label for="name">Name</label>
-        <input id="name" name="name" type="text" placeholder="Your name" required>
-      </div>
-      <div>
-        <label for="email">Email</label>
-        <input id="email" name="email" type="email" placeholder="you@example.com" required>
-      </div>
-      <div>
-        <label for="message">Message</label>
-        <textarea id="message" name="message" placeholder="How can we help?" required></textarea>
-      </div>
-      <button class="submit" type="submit">Send message</button>
-    </form>
+<form
+  class="contact"
+  action="https://formspree.io/f/moedbrvk"
+  method="POST"
+  enctype="multipart/form-data"
+>
+  <div>
+    <label for="name">Your name</label>
+    <input
+      id="name"
+      name="name"
+      type="text"
+      placeholder="Your name"
+      autocomplete="name"
+      required
+    >
+  </div>
+
+  <div>
+    <label for="email">Your email</label>
+    <input
+      id="email"
+      name="email"
+      type="email"
+      placeholder="you@example.com"
+      autocomplete="email"
+      required
+    >
+  </div>
+
+  <div>
+    <label for="recommendation">Your recommendation</label>
+    <textarea
+      id="recommendation"
+      name="recommendation"
+      placeholder="What would you recommend?"
+      required
+    ></textarea>
+  </div>
+
+  <div>
+    <label for="upload">Attach a file (optional)</label>
+    <input id="upload" name="upload" type="file">
+  </div>
+
+  <button class="submit" type="submit">Send message</button>
+</form>
   </div>
 </section>
 
